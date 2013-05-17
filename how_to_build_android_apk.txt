@@ -1,0 +1,109 @@
+First a big thx to Alno from Streamboard for the oscamMonitor-android-svn!
+
+How to build app oscam-monitor for android 2.2 under linux...
+
+1. Download the sdk from:
+http://dl.google.com/android/android-sdk_r10-linux_x86.tgz
+tar -xzvf android-sdk_r10-linux_x86.tgz
+
+2. cd ../android-sdk-linux_x86/tools
+./android
+Left click "available packages"
+Right side open "Android Repository"
+
+Select :
+Android SDK tools rev 10
+Android SDK platform-tools rev 3
+SDK Platform Android 2.2 API 8 rev 2
+
+Press: "Install Selected"
+Wait til install hase finished (take some time!)
+
+Left click: "virtual device"
+New
+Name: "myavd"
+Target: android 2.2 api level 8
+Sdcard size 128mb
+Built-in skin: hvga
+Press: "create avd"
+
+Now you can close android!
+
+3. Now checkout OscamAndroidMonitor:
+cd ../android-sdk-linux_x86/
+svn co http://streamboard.gmc.to/svn/android OscamAndroidMonitor
+
+4. Now we get "ant" from:
+http://apache.lauf-forum.at//ant/binaries/apache-ant-1.8.2-bin.tar.gz
+tar -xzvf apache-ant-1.8.2-bin.tar.gz
+
+5. Preparing andorid-sdk for using OscamAndroidMonitor
+cd ../android-sdk-linux_x86/tools
+./android list targets
+
+That's showing all "id's"!
+remember the correct id for Android 2.2 API 8
+f.e. it shows:
+id: 12 or "android-8"
+     Name: Android 2.2
+     Type: Platform
+     API level: 8
+     Revision: 2
+     Skins: WQVGA432, WQVGA400, WVGA800 (default), QVGA, WVGA854, HVGA
+
+So id "12" IS IMPORTANT for next steps! We must set target to 12 in that case!
+
+6. Recognize now OscamAndroidMonitor into SDK :
+./android update project --name OscamMonitor --target 12 --path ../android-sdk-linux_x86/OscamAndroidMonitor
+
+That should be successfull without any errors... than got to 7!
+
+7. Now we build the stuff...
+cd ../android-sdk-linux_x86/OscamAndroidMonitor
+export PATH="../android-sdk-linux_x86/apache-ant-1.8.2/bin:$PATH"
+ant debug
+
+(alternate you can use "ant release" instead of "ant debug"!)
+if all fine it shows you after a few seconds:
+.apk
+BUILD SUCCESSFUL
+Total time: 8 seconds
+
+8. On Success now you can find your apk in:
+../android-sdk-linux_x86/OscamAndroidMonitor/bin
+f.e. it's there:
+OscamMonitor-debug.apk
+
+So you have successfull built your android-app ;)
+
+
+
+Installing for testing on your android-pad/phone...
+
+9. If not already done install the "adbwireless.apk" from a market on your pad/phone.
+Start the app
+Press red button
+It should be green after few seconds and showing your phone-ip
+Press home-button (NOT return-button thats important!!!!)
+Now you see on top the adbwireless icon on your pad/phone
+
+10. Now we connect pc with pad/phone:
+cd ../android-sdk-linux_x86/platform-tools
+./adb connect "your-pad/phone-ip" + enter
+If all fine it shows: connected to "your-phone/pad-ip"
+
+11. Install the apk now:
+./adb install ../android-sdk-linux_x86/OscamAndroidMonitor/bin/OscamMonitor-debug.apk
+
+If all fine you can find them now under "programs" on your pad/phone
+Test the app
+
+If something unlike and you want deinstall soft you can also do these by:
+cd ../android-sdk-linux_x86/platform-tools
+./adb uninstall OscamMonitor-debug
+
+App is gone again from pad/phone ;)
+
+have fun...
+
+

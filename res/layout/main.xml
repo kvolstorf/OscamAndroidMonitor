@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center"
-    android:orientation="vertical" >
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@android:id/tabhost" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:padding="1dp">
+		
+		<TabWidget 
+			android:id="@android:id/tabs" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" />
+			<TextView 
+					android:id="@+id/serverstatus" 
+					android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_marginBottom="3dip"
+            		android:gravity="center"
+					android:singleLine="true"  
+					android:ellipsize="marquee"/>	
+		<FrameLayout 
+			android:id="@android:id/tabcontent" 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"	
+			>
+			
+			<ListView 
+				android:id="@+id/ListViewClients" 
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				/>
+					
+			<ListView 
+				android:id="@+id/ListViewReader" 
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent" 
+				/>
+					
+			<ListView 
+				android:id="@+id/ListViewServer" 
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
-</LinearLayout>
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>

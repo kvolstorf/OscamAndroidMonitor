@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+	<item 
+		android:id="@+id/mnu_exitsettings" 
+		android:titleCondensed="Exit" 
+		android:title="Exit Settings"
+		android:icon="@drawable/ic_menu_exit"/>
+		
+	<item 
+		android:title="Remove Profile" 
+		android:titleCondensed="Remove" 
+		android:id="@+id/mnu_removeprofile"
+		android:icon="@drawable/ic_menu_delete"/>
+		
+	<item 
+		android:title="Add Profile" 
+		android:titleCondensed="Add" 
+		android:id="@+id/mnu_addprofile"
+		android:icon="@drawable/ic_menu_add"/>
+		
+
+	<item 
+		android:id="@+id/mnu_prevprofile" 
+		android:titleCondensed="Previous" 
+		android:title="Previous Profile"
+		android:icon="@drawable/ic_menu_left"/>
+		
+	<item 
+		android:title="Next Profile" 
+		android:titleCondensed="Next" 
+		android:id="@+id/mnu_nextprofile"
+		android:icon="@drawable/ic_menu_right"/>
+		
+
+
+</menu>

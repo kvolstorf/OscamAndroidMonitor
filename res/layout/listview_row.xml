@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+	
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="fill" android:layout_height="wrap_content" android:layout_width="fill_parent" android:paddingBottom="6dip" android:paddingRight="2dip" android:paddingLeft="0dip">
+    <TableRow 
+		android:baselineAligned="false" 
+		android:layout_height="fill_parent" 
+		android:layout_width="fill_parent" 
+		android:layout_gravity="center_horizontal">
+    <LinearLayout>
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dip"
+        android:layout_weight="1" 
+        android:layout_gravity="top" 
+        android:layout_width="40dp" 
+        android:layout_marginRight="5dip"/>    
+    </LinearLayout>    
+  		<TableLayout 
+			android:id="@+id/TableLayout01" 
+			android:layout_height="wrap_content" 
+			android:stretchColumns="1" 
+			android:gravity="fill_vertical" 
+			android:layout_weight="4" 
+			android:layout_width="fill_parent">
+			<TableRow 
+				android:id="@+id/TableRow01" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginRight="5dp"
+				android:layout_marginTop="5dip">
+				<TextView 
+					android:layout_height="wrap_content" 
+					android:layout_width="fill_parent" 
+					android:id="@+id/toptext" 
+					android:maxLines="1"
+					android:ellipsize="end"/>
+			</TableRow>
+			<TableRow 
+				android:id="@+id/TableRow02" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginRight="5dp">
+				<TextView 
+					android:layout_height="wrap_content" 
+					android:layout_width="fill_parent" 
+					android:id="@+id/bottomtext"  
+					android:layout_span="3"
+					android:textColor="#ffffff00"
+				android:maxLines="1"/>
+			</TableRow>
+		</TableLayout>		
+	
+		
+	</TableRow>
+</TableLayout>

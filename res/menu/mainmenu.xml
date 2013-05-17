@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android">
+		<item 
+			android:id="@+id/mnu_exit" 
+			android:visible="true" 
+			android:enabled="true" 
+			android:icon="@drawable/ic_menu_exit" 
+			android:title="Exit" 
+			android:titleCondensed="Exit"/>
+			
+		<item 
+			android:id="@+id/mnu_wake" 
+			android:icon="@drawable/ic_menu_wake" 
+			android:enabled="true" 
+			android:title="Wake" 
+			android:titleCondensed="Wake"/>
+			
+		<item 
+			android:id="@+id/mnu_run" 
+			android:icon="@drawable/ic_menu_run" 
+			android:enabled="true" 
+			android:title="Run" 
+			android:titleCondensed="Run"/>
+			
+		<item 
+			android:id="@+id/mnu_settings" 
+			android:enabled="true" 
+			android:visible="true" 
+			android:icon="@drawable/ic_menu_settings" 
+			android:title="Settings" 
+			android:titleCondensed="Settings"/>
+
+
+
+</menu>

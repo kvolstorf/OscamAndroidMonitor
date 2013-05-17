@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">OscamMonitor</string>
-
+    <string name="hello">Hello World, OscamMonitor!</string>
+    <string name="app_name">Oscam Monitor</string>
+	<string name="editUriLabelText">URL</string>
+	<string-array name="refreshitems">
+		<item>10 seconds</item>
+		<item>15 seconds</item>
+		<item>20 seconds</item>
+		<item>25 seconds</item>
+		<item>30 seconds</item>
+		<item>60 seconds</item>
+		<item>80 seconds</item>
+	</string-array>
 </resources>
